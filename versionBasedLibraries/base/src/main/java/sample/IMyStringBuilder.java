@@ -1,0 +1,64 @@
+package sample;
+
+import java.util.stream.IntStream;
+
+public interface IMyStringBuilder extends CharSequence, Appendable, Comparable<StringBuilder> {
+    StringBuilder getValue();
+
+    int length();
+    boolean isEmpty();
+    int capacity();
+    void ensureCapacity(int minimumCapacity);
+    void trimToSize();
+    void setLength(int newLength);
+    char charAt(int index);
+    int codePointAt(int index);
+    int codePointBefore(int index);
+    int codePointCount(int beginIndex, int endIndex);
+    int offsetByCodePoints(int index, int codePointOffset);
+    void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin);
+    void setCharAt(int index, char ch);
+    String substring(int start);
+    String substring(int start, int end);
+    CharSequence subSequence(int start, int end);
+    IntStream chars();
+    IntStream codePoints();
+    int compareTo(StringBuilder another);
+    IMyStringBuilder append(Object obj);
+    IMyStringBuilder append(String str);
+    IMyStringBuilder append(StringBuffer sb);
+    IMyStringBuilder append(CharSequence s);
+    IMyStringBuilder append(CharSequence s, int start, int end);
+    IMyStringBuilder append(char[] str);
+    IMyStringBuilder append(char[] str, int offset, int len);
+    IMyStringBuilder append(boolean b);
+    IMyStringBuilder append(char c);
+    IMyStringBuilder append(int i);
+    IMyStringBuilder append(long lng);
+    IMyStringBuilder append(float f);
+    IMyStringBuilder append(double d);
+    IMyStringBuilder appendCodePoint(int codePoint);
+    IMyStringBuilder delete(int start, int end);
+    IMyStringBuilder deleteCharAt(int index);
+    IMyStringBuilder replace(int start, int end, String str);
+    IMyStringBuilder insert(int index, char[] str, int offset, int len);
+    IMyStringBuilder insert(int offset, Object obj);
+    IMyStringBuilder insert(int offset, String str);
+    IMyStringBuilder insert(int offset, char[] str);
+    IMyStringBuilder insert(int dstOffset, CharSequence s);
+    IMyStringBuilder insert(int dstOffset, CharSequence s, int start, int end);
+    IMyStringBuilder insert(int offset, boolean b);
+    IMyStringBuilder insert(int offset, char c);
+    IMyStringBuilder insert(int offset, int i);
+    IMyStringBuilder insert(int offset, long l);
+    IMyStringBuilder insert(int offset, float f);
+    IMyStringBuilder insert(int offset, double d);
+    int indexOf(String str);
+    int indexOf(String str, int fromIndex);
+    int lastIndexOf(String str);
+    int lastIndexOf(String str, int fromIndex);
+    IMyStringBuilder reverse();
+    IMyStringBuilder repeat(int codePoint, int count);
+    IMyStringBuilder repeat(CharSequence cs, int count);
+    String toString();
+}
